@@ -61,9 +61,25 @@ class Searcher():
 ```
 
 # Comparando Desempenho
-Para comprar os tempos de execução dos métodos foi ultizada a biblioteca [timeit](https://docs.python.org/3/library/timeit.html). 
+Para comparar os tempos de execução dos métodos foi ultilizada a biblioteca [timeit](https://docs.python.org/3/library/timeit.html). 
 # Resultados
 [Resultados](https://colab.research.google.com/drive/1dWDPRv9bZrR1qxNy0MO47HKx7MKtGF7C#scrollTo=FkbYJ_CRrfrB)
+```
+============================= test session starts ==============================
+platform linux -- Python 3.7.14, pytest-3.6.4, py-1.11.0, pluggy-0.7.1 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /content, inifile:
+plugins: typeguard-2.7.1
+collected 8 items
 
+test_data.py::test_get_comment_from_id PASSED                            [ 12%]
+test_data.py::test_get_comment_from_id_notfound PASSED                   [ 25%]
+test_data.py::test_get_comment_from_id_fast PASSED                       [ 37%]
+test_data.py::test_get_comment_from_id_fast_notfound PASSED              [ 50%]
+test_data.py::test_get_sentiment_in_range PASSED                         [ 62%]
+test_data.py::test_twoScoreSum PASSED                                    [ 75%]
+test_data.py::test_twoScoreSum_fast PASSED                               [ 87%]
+test_data.py::test_twoScoreSum_fast_notfound PASSED                      [100%]
 
-
+========================== 8 passed in 116.46 seconds ==========================
+```
