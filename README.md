@@ -6,7 +6,10 @@
   - Victor Gomes ([GitHub](https://github.com/gabrielblins))
 
 
-Este repósitorio contem uma resolução adaptada do *Guided Project: Building Fast Queries on a CSV* do curso *Algorithm Complexity* da plataforma Dataquest. Com o objetivo de avaliar o desempenho das funções implementadas, as quais realizam buscas de maneiras distintas. Desta forma foram realizados testes de benchmark para medir o tempo de execução das funções.
+Este repósitorio contem uma resolução adaptada do *Guided Project: Building Fast Queries on a CSV* do curso *Algorithm Complexity* da plataforma Dataquest. Com o objetivo de avaliar o desempenho das funções implementadas, as quais realizam buscas de maneiras distintas. Desta forma foram realizados testes de benchmark para medir o tempo de execução das funções. A partir delas é possivel:
+* Dado um id de uma mensagem no Reddit, retornar todas as informações sobre a mensagem
+* Dado um limite inferior e superior da coluna "sentiment", retornar todas as mensagens com valores de sentimento entre os limites inferior e superior 
+* dado um valor de parâmetro, retornar duas mensagens cuja soma do valor da coluna "score" é igual ao parâmetro. Retornar -1 se não existir. 
 
 # Dataset
 Para obter o dataset basta gerar um arquivo json do *Kaggle's beta API* e adicionar ao diretorio /root/.kaggle
