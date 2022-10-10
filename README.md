@@ -17,6 +17,53 @@ Para obter o dataset basta gerar um arquivo json do *Kaggle's beta API* e adicio
  data = read_csv('the-reddit-climate-change-dataset-comments.csv')
  ```
 # Searcher
-A clase Searcher implementa métodos 
+A classe Searcher implementa métodos os quais realizam as buscas.
+
+```python
+class Searcher():
+    def __init__(self, csv):
+        self.header = csv[0]         
+        self.rows = csv[1:]
+        self.id_to_row = {}
+        for row in self.rows:
+            self.id_to_row[row[1]] = row  
+
+    def get_comment_from_id(self, id):   
+        for row in self.rows:
+            if row[self.header.index('id')] == id:
+                return row
+        return None
+
+    def get_comment_from_id_fast(self,id):
+        if id in self.id_to_row.keys():
+            return self.id_to_row[id] 
+        return None                      
+      
+    def get_sentiment_in_range(self, bottom ,upper):
+        return [row for row in self.rows if row[-2] >= bottom and row[-2] <= upper]
+  
+    def twoScoreSum(self, targetSum):    
+        for row1 in self.rows:                     
+            for row2 in self.rows:
+                if float(row1[-1]) + float(row2[-1]) == targetSum:
+                    return [row1, row2]
+        return -1          
+
+    def twoScoreSum_fast(self,targetSum):
+        results = {}
+        for row in self.rows:
+            y = targetSum - float(row[-1])
+            if y in results:
+                return [results[y], row]
+            else:
+                results[float(row[-1])] = row
+        return -1
+```
+
+# Comparando Desempenho
+Para comprar os tempos de execução dos métodos foi ultizada a biblioteca [timeit](https://docs.python.org/3/library/timeit.html). 
+# Resultados
+[Resultados](https://colab.research.google.com/drive/1dWDPRv9bZrR1qxNy0MO47HKx7MKtGF7C#scrollTo=FkbYJ_CRrfrB)
+
 
 
