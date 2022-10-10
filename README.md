@@ -3,3 +3,6 @@
 
 
 Este repósitorio contem uma resolução adaptada do *Guided Project: Building Fast Queries on a CSV* do curso *Algorithm Complexity* da plataforma Dataquest. Com o objetivo de avalizar o desempenho das funções implementadas, as quais realizam buscas de maneiras distintas.
+
+
+
