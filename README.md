@@ -36,7 +36,7 @@ A classe Searcher implementa métodos os quais realizam as buscas.
 - twoScoreSum
   - Recebe um valor e retorna dois comentários cuja a soma dos scores seja igual ao valor, caso não encontre a função retorna -1. 
   - Complexidade $O(n²)$
-- twoScoreSum
+- twoScoreSum_fast
   - Recebe um valor e retorna dois comentários cuja a soma dos scores seja igual ao valor, caso não encontre a função retorna -1. Essa função é executada de forma bem mais rápida que a anterior, já que faz uso de dicionários. 
   - Complexidade $O(n)$
 
